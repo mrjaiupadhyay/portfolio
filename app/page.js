@@ -128,7 +128,7 @@ const PROJECTS = [
       'Resume Optimization',
       'Python',
     ],
-    github: '',
+    github: 'https://github.com/sumit-pal07/AI-Resume-Analyzer',
     demo: '',
   },
 ];
