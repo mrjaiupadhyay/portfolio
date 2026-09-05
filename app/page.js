@@ -95,8 +95,8 @@ const PROJECTS = [
       'Data Analysis',
       'Recommendation',
     ],
-    github: '',
-    demo: '',
+    github: 'https://github.com/mrjaiupadhyay/credit-card-recommendation-system',
+    demo: 'https://credit-card-recommendation-system-plum.vercel.app/',
   },
 
   {
