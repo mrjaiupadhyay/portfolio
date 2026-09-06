@@ -95,8 +95,8 @@ const PROJECTS = [
       'Data Analysis',
       'Recommendation',
     ],
-    github: 'https://github.com/mrjaiupadhyay/credit-card-recommendation-system',
-    demo: 'https://credit-card-recommendation-system-plum.vercel.app/',
+    github: '',
+    demo: '',
   },
 
   {
@@ -176,17 +176,17 @@ function Navbar({ open, setOpen, active }) {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#050510]/80 backdrop-blur-xl border-b border-white/5'
+          ? 'bg-white/80 backdrop-blur-xl border-b border-slate-900/5 shadow-sm shadow-slate-900/5'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/30 group-hover:scale-110 transition">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1D4ED8] to-[#111827] flex items-center justify-center font-bold text-white shadow-lg shadow-[#111827]/25 group-hover:scale-110 transition">
               J
             </div>
-            <span className="font-bold text-lg hidden sm:block">
+            <span className="font-bold text-lg hidden sm:block text-slate-900">
               Jai <span className="gradient-text">Upadhyay</span>
             </span>
           </a>
@@ -198,8 +198,8 @@ function Navbar({ open, setOpen, active }) {
                 href={`#${n.id}`}
                 className={`px-3 py-2 text-sm rounded-lg transition-colors ${
                   active === n.id
-                    ? 'text-white bg-white/5'
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
+                    ? 'text-slate-900 bg-slate-900/5'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-900/5'
                 }`}
               >
                 {n.label}
@@ -211,12 +211,12 @@ function Navbar({ open, setOpen, active }) {
             <a
               href="/resume.pdf"
               download
-              className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 btn-glow"
+              className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-[#1D4ED8] to-[#111827] hover:from-[#3B82F6] hover:to-[#06B6D4] btn-glow text-white"
             >
               <Download size={16} /> Resume
             </a>
             <button
-              className="lg:hidden p-2 rounded-lg hover:bg-white/5"
+              className="lg:hidden p-2 rounded-lg hover:bg-slate-900/5 text-slate-900"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >
@@ -232,7 +232,7 @@ function Navbar({ open, setOpen, active }) {
                 key={n.id}
                 href={`#${n.id}`}
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 transition"
               >
                 <n.icon size={18} />
                 {n.label}
@@ -241,7 +241,7 @@ function Navbar({ open, setOpen, active }) {
             <a
               href="/resume.pdf"
               download
-              className="flex items-center gap-3 px-3 py-3 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 mt-2"
+              className="flex items-center gap-3 px-3 py-3 rounded-lg bg-gradient-to-r from-[#1D4ED8] to-[#111827] mt-2 text-white"
             >
               <Download size={18} /> Download Resume
             </a>
@@ -269,28 +269,28 @@ function Hero() {
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 grid-bg" />
-      <div className="orb w-[500px] h-[500px] bg-purple-600/40 -top-40 -left-40" style={{ animationDelay: '0s' }} />
-      <div className="orb w-[400px] h-[400px] bg-indigo-600/40 top-1/3 right-0" style={{ animationDelay: '5s' }} />
-      <div className="orb w-[350px] h-[350px] bg-pink-500/30 bottom-0 left-1/3" style={{ animationDelay: '10s' }} />
+      <div className="orb w-[500px] h-[500px] bg-[#06B6D4] -top-40 -left-40" style={{ animationDelay: '0s' }} />
+      <div className="orb w-[400px] h-[400px] bg-[#1D4ED8] top-1/3 right-0" style={{ animationDelay: '5s' }} />
+      <div className="orb w-[350px] h-[350px] bg-[#06B6D4] bottom-0 left-1/3" style={{ animationDelay: '10s' }} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-5 gap-12 items-center w-full">
         <div className="lg:col-span-3 space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-sm">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-slate-300">Open to Internships & Opportunities</span>
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="text-slate-700">Open to Internships & Opportunities</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-slate-900">
             Hi, I&apos;m <br className="sm:hidden" />
             <span className="gradient-text">Jai Upadhyay</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-slate-400 min-h-[3rem]">
+          <p className="text-lg sm:text-xl text-slate-600 min-h-[3rem]">
             {typed}
-            <span className="cursor-blink text-purple-400">|</span>
+            <span className="cursor-blink text-[#1D4ED8]">|</span>
           </p>
 
-          <p className="text-slate-400 max-w-2xl leading-relaxed">
+          <p className="text-slate-600 max-w-2xl leading-relaxed">
             Technology enthusiast pursuing B.Tech in Computer Science at Galgotias University.
             I build Android apps, AI/ML systems, and modern web experiences that solve real-world problems.
           </p>
@@ -298,14 +298,14 @@ function Hero() {
           <div className="flex flex-wrap gap-3 pt-2">
             <a
               href="#projects"
-              className="btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 font-medium"
+              className="btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] to-[#111827] font-medium text-white"
             >
               View Projects <ArrowRight size={18} />
             </a>
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 hover:border-purple-500/50 bg-white/5 hover:bg-white/10 font-medium transition"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-900/10 hover:border-[#1D4ED8]/40 bg-slate-900/[0.03] hover:bg-slate-900/[0.06] font-medium text-slate-900 transition"
             >
               <Download size={18} /> Download Resume
             </a>
@@ -313,37 +313,37 @@ function Hero() {
               href="https://www.linkedin.com/in/jai-upadhyay-72781a361/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-white/10 hover:border-blue-500/50 bg-white/5 hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-slate-900/10 hover:border-[#1D4ED8]/40 bg-slate-900/[0.03] hover:bg-slate-900/[0.06] transition"
               aria-label="LinkedIn"
             >
-              <Linkedin size={18} className="text-blue-400" />
+              <Linkedin size={18} className="text-blue-600" />
             </a>
 
             <a
               href="https://github.com/mrjaiupadhyay"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-white/10 hover:border-white/40 bg-white/5 hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-slate-900/10 hover:border-slate-900/30 bg-slate-900/[0.03] hover:bg-slate-900/[0.06] transition"
               aria-label="GitHub"
             >
-              <Github size={18} />
+              <Github size={18} className="text-slate-900" />
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-6 pt-6 text-sm text-slate-400">
-            <div className="flex items-center gap-2"><MapPin size={14} className="text-purple-400"/> Bareilly, UP, India</div>
-            <div className="flex items-center gap-2"><GraduationCap size={14} className="text-purple-400"/> Galgotias University</div>
-            <div className="flex items-center gap-2"><Zap size={14} className="text-purple-400"/> CGPA 8.00</div>
+          <div className="flex flex-wrap gap-6 pt-6 text-sm text-slate-600">
+            <div className="flex items-center gap-2"><MapPin size={14} className="text-[#1D4ED8]"/> Bareilly, UP, India</div>
+            <div className="flex items-center gap-2"><GraduationCap size={14} className="text-[#1D4ED8]"/> Galgotias University</div>
+            <div className="flex items-center gap-2"><Zap size={14} className="text-[#1D4ED8]"/> CGPA 8.00</div>
           </div>
         </div>
 
         {/* Profile picture */}
         <div className="lg:col-span-2 flex justify-center lg:justify-end">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full blur-2xl opacity-40 animate-pulse" />
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-1 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
-              <div className="w-full h-full rounded-full bg-[#0a0a15] overflow-hidden relative">
-                <div className="absolute inset-0 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-7xl font-bold tracking-tight">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#06B6D4] to-[#1D4ED8] rounded-full blur-2xl opacity-25 animate-pulse" />
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-1 bg-gradient-to-br from-[#06B6D4] via-[#1D4ED8] to-[#111827]">
+              <div className="w-full h-full rounded-full bg-slate-100 overflow-hidden relative">
+                <div className="absolute inset-0 rounded-full flex items-center justify-center bg-gradient-to-br from-[#06B6D4] via-[#1D4ED8] to-[#111827] text-7xl font-bold tracking-tight text-white">
                   JU
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -356,14 +356,14 @@ function Hero() {
               </div>
             </div>
             {/* Floating tags */}
-            <div className="absolute -top-4 -left-6 glass-card px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 animate-bounce" style={{ animationDuration: '3s' }}>
-              <Terminal size={12} className="text-green-400"/> Cloud
+            <div className="absolute -top-4 -left-6 glass-card px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 text-slate-700 animate-bounce" style={{ animationDuration: '3s' }}>
+              <Terminal size={12} className="text-green-600"/> Cloud
             </div>
-            <div className="absolute top-1/2 -right-4 glass-card px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
-              <Cpu size={12} className="text-purple-400"/> AI/ML
+            <div className="absolute top-1/2 -right-4 glass-card px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 text-slate-700 animate-bounce" style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
+              <Cpu size={12} className="text-[#1D4ED8]"/> AI/ML
             </div>
-            <div className="absolute -bottom-2 left-4 glass-card px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '1s' }}>
-              <Code2 size={12} className="text-indigo-400"/> Python
+            <div className="absolute -bottom-2 left-4 glass-card px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 text-slate-700 animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '1s' }}>
+              <Code2 size={12} className="text-[#111827]"/> Python
             </div>
           </div>
         </div>
@@ -375,11 +375,11 @@ function Hero() {
 function SectionHeader({ eyebrow, title, subtitle }) {
   return (
     <div className="text-center mb-14 fade-in">
-      <p className="text-sm font-medium text-purple-400 tracking-widest uppercase mb-3">{eyebrow}</p>
-      <h2 className="text-3xl sm:text-5xl font-bold tracking-tight">
+      <p className="text-sm font-medium text-[#1D4ED8] tracking-widest uppercase mb-3">{eyebrow}</p>
+      <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900">
         {title}
       </h2>
-      {subtitle && <p className="mt-4 text-slate-400 max-w-2xl mx-auto">{subtitle}</p>}
+      {subtitle && <p className="mt-4 text-slate-600 max-w-2xl mx-auto">{subtitle}</p>}
     </div>
   )
 }
@@ -397,12 +397,12 @@ function About() {
         <SectionHeader eyebrow="About Me" title="Building solutions that matter" />
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="fade-in glass-card p-8 rounded-2xl">
-            <p className="text-slate-300 leading-relaxed mb-4">
-              I&apos;m a <span className="text-purple-400 font-semibold">Technology enthusiast</span> currently pursuing my Bachelor of Technology in Computer Science at Galgotias University. My passion sits at the intersection of{' '}
-              <span className="text-indigo-400 font-semibold">Android development</span>,{' '}
-              <span className="text-pink-400 font-semibold">AI/ML</span>, and modern software engineering.
+            <p className="text-slate-700 leading-relaxed mb-4">
+              I&apos;m a <span className="text-[#1D4ED8] font-semibold">Technology enthusiast</span> currently pursuing my Bachelor of Technology in Computer Science at Galgotias University. My passion sits at the intersection of{' '}
+              <span className="text-[#1D4ED8] font-semibold">Android development</span>,{' '}
+              <span className="text-[#06B6D4] font-semibold">AI/ML</span>, and modern software engineering.
             </p>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-slate-600 leading-relaxed">
               I love turning ideas into shipped products — from mobile apps at AICTE Google to AI systems for real world problems.
               I&apos;m constantly learning, and I&apos;m especially interested in building technology that solves real-world problems.
             </p>
@@ -410,7 +410,7 @@ function About() {
           <div className="grid grid-cols-2 gap-4 fade-in">
             {stats.map((s) => (
               <div key={s.label} className="glass-card p-6 rounded-2xl text-center group">
-                <s.icon className="mx-auto mb-2 text-purple-400 group-hover:scale-110 transition" />
+                <s.icon className="mx-auto mb-2 text-[#1D4ED8] group-hover:scale-110 transition" />
                 <div className="text-3xl font-bold gradient-text">{s.value}</div>
                 <div className="text-xs uppercase tracking-widest text-slate-500 mt-1">{s.label}</div>
               </div>
@@ -434,11 +434,11 @@ function Skills() {
                 <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${data.color} flex items-center justify-center shadow-lg`}>
                   <data.icon size={20} className="text-white" />
                 </div>
-                <h3 className="font-semibold text-lg">{cat}</h3>
+                <h3 className="font-semibold text-lg text-slate-900">{cat}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {data.items.map((s) => (
-                  <span key={s} className="skill-chip px-3 py-1.5 rounded-lg text-sm bg-white/5 border border-white/10 hover:border-purple-500/50 hover:text-purple-300 transition">
+                  <span key={s} className="skill-chip px-3 py-1.5 rounded-lg text-sm bg-slate-900/[0.03] border border-slate-900/10 text-slate-700 hover:border-[#1D4ED8]/40 hover:text-[#111827] transition">
                     {s}
                   </span>
                 ))}
@@ -458,13 +458,13 @@ function Experience() {
         <SectionHeader eyebrow="Experience" title="Where I've worked" />
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/50 via-purple-500/50 to-transparent" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#06B6D4]/60 via-[#1D4ED8]/60 to-transparent" />
 
           <div className="space-y-10">
             {EXPERIENCE.map((exp, i) => (
               <div key={i} className={`relative fade-in flex flex-col md:flex-row md:items-center gap-6 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                 {/* Dot */}
-                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 ring-4 ring-[#050510] z-10" />
+                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-[#1D4ED8] to-[#111827] ring-4 ring-[#F1F5F9] z-10" />
 
                 <div className="md:w-1/2 ml-12 md:ml-0 md:px-8">
                   <div className="glass-card p-6 rounded-2xl">
@@ -473,15 +473,15 @@ function Experience() {
                         <exp.icon size={18} className="text-white" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-lg">{exp.role}</h3>
-                        <p className="text-purple-400 text-sm">{exp.company}</p>
+                        <h3 className="font-bold text-lg text-slate-900">{exp.role}</h3>
+                        <p className="text-[#1D4ED8] text-sm">{exp.company}</p>
                         <p className="text-slate-500 text-xs mt-1">{exp.period} · {exp.location}</p>
                       </div>
                     </div>
-                    <ul className="space-y-2 text-slate-400 text-sm">
+                    <ul className="space-y-2 text-slate-600 text-sm">
                       {exp.points.map((p, j) => (
                         <li key={j} className="flex gap-2">
-                          <ChevronRight size={16} className="text-purple-400 mt-0.5 flex-shrink-0" />
+                          <ChevronRight size={16} className="text-[#1D4ED8] mt-0.5 flex-shrink-0" />
                           <span>{p}</span>
                         </li>
                       ))}
@@ -517,7 +517,7 @@ function Projects() {
               <div
                 className={`h-32 relative bg-gradient-to-br ${p.color} flex items-center justify-center overflow-hidden`}
               >
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-black/10" />
 
                 <div
                   className="absolute inset-0 opacity-30"
@@ -535,11 +535,11 @@ function Projects() {
               </div>
 
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="font-bold text-lg mb-2 group-hover:text-purple-300 transition">
+                <h3 className="font-bold text-lg mb-2 text-slate-900 group-hover:text-[#111827] transition">
                   {p.title}
                 </h3>
 
-                <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                <p className="text-slate-600 text-sm leading-relaxed flex-1">
                   {p.description}
                 </p>
 
@@ -547,21 +547,21 @@ function Projects() {
                   {p.tags.map((t) => (
                     <span
                       key={t}
-                      className="text-xs px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-300 border border-purple-500/20"
+                      className="text-xs px-2.5 py-1 rounded-md bg-[#1D4ED8]/10 text-[#111827] border border-[#1D4ED8]/20"
                     >
                       {t}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-2 mt-5 pt-4 border-t border-white/5">
+                <div className="flex gap-2 mt-5 pt-4 border-t border-slate-900/5">
                   {/* GitHub Code Button */}
                   {p.github ? (
                     <a
                       href={p.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-sm transition"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-slate-900/[0.04] hover:bg-slate-900/[0.08] text-slate-700 hover:text-slate-900 text-sm transition"
                     >
                       <Github size={14} />
                       Code
@@ -569,7 +569,7 @@ function Projects() {
                   ) : (
                     <button
                       disabled
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-white/5 text-slate-500 text-sm cursor-not-allowed"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-slate-900/[0.04] text-slate-400 text-sm cursor-not-allowed"
                       title="Coming Soon"
                     >
                       <Github size={14} />
@@ -583,7 +583,7 @@ function Projects() {
                       href={p.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-sm transition"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-slate-900/[0.04] hover:bg-slate-900/[0.08] text-slate-700 hover:text-slate-900 text-sm transition"
                     >
                       <ExternalLink size={14} />
                       Demo
@@ -591,7 +591,7 @@ function Projects() {
                   ) : (
                     <button
                       disabled
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-white/5 text-slate-500 text-sm cursor-not-allowed"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-slate-900/[0.04] text-slate-400 text-sm cursor-not-allowed"
                       title="Coming Soon"
                     >
                       <ExternalLink size={14} />
@@ -616,20 +616,20 @@ function Education() {
         <div className="hidden md:block glass-card rounded-2xl overflow-hidden fade-in">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-white/10 bg-white/5">
-                <th className="text-left px-6 py-4 text-sm font-semibold text-purple-300">Qualification</th>
-                <th className="text-left px-6 py-4 text-sm font-semibold text-purple-300">Institution</th>
-                <th className="text-left px-6 py-4 text-sm font-semibold text-purple-300">Year</th>
-                <th className="text-left px-6 py-4 text-sm font-semibold text-purple-300">Score</th>
+              <tr className="border-b border-slate-900/10 bg-slate-900/[0.03]">
+                <th className="text-left px-6 py-4 text-sm font-semibold text-[#111827]">Qualification</th>
+                <th className="text-left px-6 py-4 text-sm font-semibold text-[#111827]">Institution</th>
+                <th className="text-left px-6 py-4 text-sm font-semibold text-[#111827]">Year</th>
+                <th className="text-left px-6 py-4 text-sm font-semibold text-[#111827]">Score</th>
               </tr>
             </thead>
             <tbody>
               {EDUCATION.map((e, i) => (
-                <tr key={i} className="border-b border-white/5 last:border-0 hover:bg-white/5 transition">
-                  <td className="px-6 py-5 font-medium">{e.qual}</td>
-                  <td className="px-6 py-5 text-slate-400">{e.inst}</td>
-                  <td className="px-6 py-5 text-slate-400">{e.year}</td>
-                  <td className="px-6 py-5"><span className="px-2.5 py-1 rounded-md bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-purple-300 text-sm">{e.score}</span></td>
+                <tr key={i} className="border-b border-slate-900/5 last:border-0 hover:bg-slate-900/[0.03] transition">
+                  <td className="px-6 py-5 font-medium text-slate-900">{e.qual}</td>
+                  <td className="px-6 py-5 text-slate-600">{e.inst}</td>
+                  <td className="px-6 py-5 text-slate-600">{e.year}</td>
+                  <td className="px-6 py-5"><span className="px-2.5 py-1 rounded-md bg-gradient-to-r from-[#06B6D4]/10 to-[#1D4ED8]/10 text-[#111827] text-sm">{e.score}</span></td>
                 </tr>
               ))}
             </tbody>
@@ -639,11 +639,11 @@ function Education() {
         <div className="md:hidden space-y-4">
           {EDUCATION.map((e, i) => (
             <div key={i} className="glass-card p-5 rounded-2xl fade-in">
-              <h3 className="font-bold">{e.qual}</h3>
-              <p className="text-sm text-slate-400 mt-1">{e.inst}</p>
+              <h3 className="font-bold text-slate-900">{e.qual}</h3>
+              <p className="text-sm text-slate-600 mt-1">{e.inst}</p>
               <div className="flex justify-between mt-3 text-sm">
                 <span className="text-slate-500">{e.year}</span>
-                <span className="text-purple-300 font-semibold">{e.score}</span>
+                <span className="text-[#111827] font-semibold">{e.score}</span>
               </div>
             </div>
           ))}
@@ -664,8 +664,8 @@ function Achievements() {
               <div className={`mx-auto w-14 h-14 rounded-xl bg-gradient-to-br ${a.color} flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition`}>
                 <a.icon size={24} className="text-white" />
               </div>
-              <p className="text-xs text-purple-400 font-semibold tracking-widest uppercase mb-2">{a.year}</p>
-              <p className="font-medium text-slate-200">{a.title}</p>
+              <p className="text-xs text-[#1D4ED8] font-semibold tracking-widest uppercase mb-2">{a.year}</p>
+              <p className="font-medium text-slate-800">{a.title}</p>
             </div>
           ))}
         </div>
@@ -681,37 +681,37 @@ function Contact() {
         <SectionHeader eyebrow="Contact" title="Let's build something together" subtitle="I'm actively looking for internship and full-time software engineering opportunities." />
         <div className="glass-card p-8 sm:p-10 rounded-3xl fade-in">
           <div className="grid sm:grid-cols-3 gap-6 mb-8">
-            <a href="mailto:mrjaiupadhyay@gmail.com" className="group text-center p-4 rounded-xl hover:bg-white/5 transition">
-              <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-3 group-hover:scale-110 transition">
-                <Mail size={20} />
+            <a href="mailto:mrjaiupadhyay@gmail.com" className="group text-center p-4 rounded-xl hover:bg-slate-900/[0.03] transition">
+              <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-[#1D4ED8] to-[#111827] flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                <Mail size={20} className="text-white" />
               </div>
               <p className="text-xs uppercase tracking-widest text-slate-500 mb-1">Email</p>
-              <p className="text-sm font-medium break-all">mrjaiupadhyay@gmail.com</p>
+              <p className="text-sm font-medium break-all text-slate-900">mrjaiupadhyay@gmail.com</p>
             </a>
-            <a href="tel:+917533951156" className="group text-center p-4 rounded-xl hover:bg-white/5 transition">
+            <a href="tel:+917533951156" className="group text-center p-4 rounded-xl hover:bg-slate-900/[0.03] transition">
               <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-3 group-hover:scale-110 transition">
-                <Phone size={20} />
+                <Phone size={20} className="text-white" />
               </div>
               <p className="text-xs uppercase tracking-widest text-slate-500 mb-1">Phone</p>
-              <p className="text-sm font-medium">+91 75339 51156</p>
+              <p className="text-sm font-medium text-slate-900">+91 75339 51156</p>
             </a>
             <div className="text-center p-4 rounded-xl">
               <div className="mx-auto w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center mb-3">
-                <MapPin size={20} />
+                <MapPin size={20} className="text-white" />
               </div>
               <p className="text-xs uppercase tracking-widest text-slate-500 mb-1">Location</p>
-              <p className="text-sm font-medium">Bareilly, UP, India</p>
+              <p className="text-sm font-medium text-slate-900">Bareilly, UP, India</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-3 justify-center pt-6 border-t border-white/5">
+          <div className="flex flex-wrap gap-3 justify-center pt-6 border-t border-slate-900/5">
             <a
               href="https://www.linkedin.com/in/jai-upadhyay-72781a361/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-500/10 border border-blue-500/30 hover:bg-blue-500/20 transition"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-500/10 border border-blue-500/30 hover:bg-blue-500/20 transition text-slate-900"
             >
-              <Linkedin size={16} className="text-blue-400" />
+              <Linkedin size={16} className="text-blue-600" />
               LinkedIn
             </a>
 
@@ -719,7 +719,7 @@ function Contact() {
               href="https://github.com/mrjaiupadhyay"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 border border-white/20 hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900/[0.03] border border-slate-900/15 hover:bg-slate-900/[0.06] transition text-slate-900"
             >
               <Github size={16} />
               GitHub
@@ -729,12 +729,12 @@ function Contact() {
               href="https://codolio.com/profile/mrjaiupadhyay"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 transition"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1D4ED8]/10 border border-[#1D4ED8]/30 hover:bg-[#1D4ED8]/20 transition text-slate-900"
             >
-              <Code2 size={16} className="text-purple-400" />
+              <Code2 size={16} className="text-[#111827]" />
               Codolio
             </a>
-            <a href="mailto:mrjaiupadhyay@gmail.com" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 btn-glow font-medium">
+            <a href="mailto:mrjaiupadhyay@gmail.com" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#1D4ED8] to-[#111827] btn-glow font-medium text-white">
               <Mail size={16} /> Say Hi
             </a>
           </div>
@@ -746,11 +746,11 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 py-8 px-4">
+    <footer className="border-t border-slate-900/5 py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
         <p>© 2026 Jai Upadhyay</p>
         <p className="flex items-center gap-1">
-          Built with <span className="text-red-400">❤</span> and code.
+          Built with <span className="text-red-500">❤</span> and code.
         </p>
       </div>
     </footer>
@@ -779,7 +779,7 @@ const App = () => {
   }, [])
 
   return (
-    <main className="relative min-h-screen bg-[#050510]">
+    <main className="relative min-h-screen bg-[#F1F5F9] text-[#111827]">
       <Navbar open={open} setOpen={setOpen} active={active} />
       <Hero />
       <About />
