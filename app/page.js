@@ -348,7 +348,7 @@ function Hero() {
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/profile.jpg"
+                  src="/profil.jpg"
                   alt="Jai Upadhyay"
                   className="absolute inset-0 w-full h-full object-cover rounded-full"
                   onError={(e) => { e.currentTarget.style.display = 'none' }}
